@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lobster&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900;1000&display=swap');
+
+.sidebar{
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    left: -310px;
+    top: 0;
+    margin: auto;
+    background-color: rgba(2, 2, 4, 0.6);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='397' height='397' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%2308080C' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23070A0A'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    padding: 120px 0;
+    z-index: 26;
+    align-items: center;
+    transition: all 0.4s;
+}
+.sidebar-active{
+    left: 0;
+}
+
+:is(.sidebar div, .sidebar input){
+    font-family: 'Urbanist';
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.sidebar input{
+    width: 85%;
+    padding: 12px 14px;
+    font-size: 17px;
+    border: 2px solid rgb(60, 62, 65);
+    background: rgba(2, 2, 4, 0.1);
+    color: var(--Rockstar);
+    border-radius: 6px;
+    outline: none;
+}
+.sidebar input:focus{
+    border: 2px solid var(--Rockstar);
+}
+
+.sidebar .menu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 65px;
+}
+
+.menu .menu-item{
+    width: 100%;
+    position: relative;
+    padding: 20px 5px 20px 43px;
+    border-bottom: 1px solid rgb(79, 82, 87,0.25);
+    color: beige;
+    font-size: 23px;
+    cursor: pointer;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition-property: transform, opacity, color;
+    transition-duration: 0.35s ease-in-out, 0.35s ease-in-out, 0.4s;
+}
+.menu .menu-item:nth-child(1){transition-delay: 0.15s, 0.15s, 0s;}
+.menu .menu-item:nth-child(2){transition-delay: 0.2s, 0.2s, 0s;}
+.menu .menu-item:nth-child(3){transition-delay: 0.25s, 0.25s, 0s;}
+.menu .menu-item:nth-child(4){transition-delay: 0.3s, 0.3s, 0s;}
+.menu .menu-item:nth-child(5){transition-delay: 0.35s, 0.35s, 0s;}
+.menu .menu-item:nth-child(6){transition-delay: 0.4s, 0.4s, 0s;}
+.menu .menu-item:nth-child(7){transition-delay: 0.45s, 0.45s, 0s;}
+.menu .menu-item:nth-child(8){transition-delay: 0.5s, 0.5s, 0s;}
+
+.sidebar-active .menu .menu-item{
+    transform: translateX(0%);
+    opacity: 1;
+}
+.menu-item::before{
+    content: "";
+    width: 3px;
+    height: calc(100% - 3px);
+    position: absolute;
+    top: 0; left: 0;
+    margin: auto;
+    background: rgb(60, 62, 65);
+}
+.menu-item:hover{
+    color: var(--Rockstar);
+    background: linear-gradient(to right, rgba(30, 36, 58, 0.3),rgba(30, 57, 58, 0.2));
+}
+.menu-item:hover::before{
+    background: var(--Rockstar);
+    box-shadow: 0 0 17px var(--Rockstar);
+}
+
+.menu-item-i{
+    transition: 0.1s;
+}
+
+.sidebar-toggler, .sidebar-toggler-inside{
+    clip-path: polygon(39% 50%, 0 0, 0 100%);
+    background: rgba(255, 166, 0, 0.6);
+    position: absolute;
+    top: 0; bottom: 0; right: -65px;
+    margin: auto;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+}
+.sidebar:not(.sidebar-active):hover .sidebar-toggler{
+    background: rgba(255, 166, 0, 1);
+}
+.sidebar-toggler-inside{
+    background-color: rgba(2, 2, 4, 0.6);
+    right: -59px;
+    scale: 0.7;
+    z-index: 8;
+    pointer-events: none;
+}

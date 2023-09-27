@@ -1,0 +1,22 @@
+[
+    {
+        "id" : "1",
+        "game" : "Red Dead Redemption",
+        "headline" : "Now on Nintendo Switch and PS4"
+    },
+    {
+        "id" : "2",
+        "game" : "Grand Theft Auto Online",
+        "headline" : "The Mammoth Avenger"
+    },
+    {
+        "id" : "3",
+        "game" : "Grand Theft Auto Online",
+        "headline" : "San Andreas Mercenaries Out Now"
+    },
+    {
+        "id" : "4",
+        "game" : "Grand Theft Auto Online",
+        "headline" : "The Vinewood Car Club"
+    }
+]

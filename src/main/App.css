@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lobster&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root{
+  --Rockstar: #fcaf17;
+  --background: #0b0b0b;
+  --darkBg: rgb(7, 8, 8);
+}
+
+::selection{
+  background: var(--Rockstar);
+  color: black;
+}
+
+@font-face {
+  src: url('../assets/fonts/Rockstar.otf');
+  font-family: Rockstar;
+}
+
+body{
+  background: var(--background);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {width: 5px;}
+body::-webkit-scrollbar-track {-webkit-box-shadow: inset 0 0 7px #162020;}
+body::-webkit-scrollbar-thumb {background-color: var(--Rockstar);}
+
+
+.App{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+
+.view-more{
+  position: absolute;
+  right: 100px; bottom: -50px;
+  margin: auto;
+  width: 160px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease;
+  font-size: 19px;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  color: gainsboro;
+  cursor: pointer;
+  z-index: 15;
+  background-repeat: none;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100%;
+  mask-size: 100%;
+  -webkit-mask-position: 0px 0px;
+  mask-position: 0px 0px;
+  -webkit-mask-image: url('../assets/other/spraying.png');
+  mask-image: url('../assets/other/spraying.png');
+}
+.view-more:hover{
+  background-color: var(--Rockstar);
+  color: black;
+  font-family: Rockstar;
+  text-decoration: none;
+}
